@@ -1,4 +1,4 @@
-module github.com/yuz77777/go-websocket-example
+module github.com/yuzuy/go-websocket-example
 
 go 1.13
 

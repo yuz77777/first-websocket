@@ -20,7 +20,7 @@ func serveHome(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "index.html")
 }
 
-func wsPage(w http.ResponseWriter, r *http.Request, hub *Hub) {
+func wsServer(w http.ResponseWriter, r *http.Request, hub *Hub) {
 	conn, err := upgrader.Upgrade(w, r, nil)
 	if err != nil {
 		log.Println(err)

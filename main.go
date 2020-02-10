@@ -11,7 +11,7 @@ func main() {
 	go hub.run()
 	http.HandleFunc("/", serveHome)
 	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
-		wsPage(w, r, hub)
+		wsServer(w, r, hub)
 	})
 	port := os.Getenv("PORT")
 	if port == "" {
